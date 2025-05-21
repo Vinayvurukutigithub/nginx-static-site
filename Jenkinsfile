@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/Vinayvurukutigithub/nginx-static-site.git', credentialsId: 'docker-token'
+                git branch: 'main', 
+                    url: 'https://github.com/Vinayvurukutigithub/nginx-static-site.git', 
+                    credentialsId: 'docker-token'
             }
         }
 
