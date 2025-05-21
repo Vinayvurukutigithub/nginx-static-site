@@ -1,11 +1,10 @@
-
 pipeline {
     agent any
 
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-user/nginx-static-site.git'
+                git url: 'https://github.com/Vinayvurukutigithub/nginx-static-site.git', credentialsId: 'github-token'
             }
         }
 
